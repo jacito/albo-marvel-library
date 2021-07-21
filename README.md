@@ -1,3 +1,4 @@
+
 # albo-marvel-library
 ## Prueba Backend Developer
 
@@ -11,6 +12,7 @@ Proyecto de integración de **API Marvel** para implementación de **librería c
 ---
 
 - AlboMarvelLibrary
+- Requerimientos
 - Base de Datos
 - Servicio A
 - Servicio B
@@ -22,10 +24,17 @@ Proyecto de integración de **API Marvel** para implementación de **librería c
 
 ### AlboMarvelLibrary 1.0-rc1
 ---
-  El proyecto es una aplicación web desarrollada en Netbean con pruebas en glassfish
+El proyecto es una aplicación web, para la actualización en base de datos de la información necesaria para los servicios a y b.
 
-  Cuenta con un arranque inicial que se encarga de conectar con el API MARVEL e ir llenando las información necesaria para los servicios principales de la biblioteca que serán descritos más adelante.
+Cuenta con un arranque inicial que se encarga de conectar con el API MARVEL e ir registrando los cambios que ayudan a alimentar a los servicios principales de la biblioteca que serán descritos más adelante.
 
+### Requerimientos
+---
+- Contar con la base de datos - mysql
+- Contar con un servidor de aplicaciones GlassFish 5 (GF)
+- Crear los recursos en GF
+  - alboComicsLibraryPool: Pool de conexiones a la base de datos
+  - **jdbc/alboComicsLibrary**: Unidad de persistencia, obligatoriamente llamada de está manera.
 
 
 ### DB **albo_comics_library_1.0.1**
