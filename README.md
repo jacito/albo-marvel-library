@@ -4,6 +4,8 @@
 Proyecto de integración de **API Marvel** para implementación de **librería comics "ALBO"**.
 
 
+>Con el paso de los años la biblioteca **albo** de comics, necesita tener actualizado todo el listado de escritores, editores y coloristas de cómics que han estado involucrados en las historias de los siguientes integrantes de los Vengadores (Iron Man, Captain America). Así como todos los demás héroes que a través de cada cómic han interactuado con cada uno de ellos. Esto hay que actualizarlo diario, ya que hay que pagarles regalías respectivas a los escritores, editores y coloristas.
+
 
 ## Tabla de contenidos:
 ---
@@ -56,39 +58,26 @@ Proyecto de integración de **API Marvel** para implementación de **librería c
 
 ```json
 {
-	"result": {
-        "responseCode": 200,
-        "responseMessage": "Transacción exitosa"
-    	}
-    	"object": {
-    		"last_sync": "Fecha de la última sincronización en 21/00/2021 12:00:25"
-        	"jsonContent": {
-            		"editor": [
-                	"Axel Alonso",
-                	"Edward Devin Lewis"
-            		],
-            		"colorist": [
-  	              		"Andrew J. Troy",
-        	        	"Andy Troy",
-                		"Dean White"
-           	 	],
-            		"letterer": [
-               			"Cory Petit",
-       		         	"Vc Ariana Maher"
-            		],
-          	  	"penciller": [
-                		"Brad K. Joyce",
-                		"Cory Petit"
-           	 	],
-            		"colorist (cover)": [
-                		"Guru Efx"
-            		],
-            		"writer": [
-               		 	"Alyssa Wong",
-                		"Barbara Kesel"
-            		]
-        	}
-    	}
+                "result": {
+                    "responseCode": 200,
+                    "responseMessage": "Transacción exitosa"
+                },
+                "object": {
+                            "last_sync": "Fecha de la última sincronización en 21/00/2021 12:00:25"
+                            "jsonContent": {
+                                "editor": [
+                                            "Axel Alonso",
+                                            "Wilson Moss"
+                                ],
+                                "colorist": [
+                                            "Andrew J. Troy",
+                                            "Andy Troy"
+                                ],
+                                "penciler": [
+                                            "Avalon Lan Medina"
+                                ]
+                            }
+                }
 }
 ```
 
@@ -99,8 +88,55 @@ Proyecto de integración de **API Marvel** para implementación de **librería c
 
 - [x] /marvel/characters/ironman
 - [x] /marvel/characters/capamerica
-  
 
+#### Response :: Ejemplo
+```json
+{
+                "object": {
+                            "result": {
+                                "responseCode": 200,
+                                "responseDescription": "Succesful transaction",
+                                "responseMessage": "OK"
+                            },
+                            "last_sync": "Fecha de la última sincronización en 21/07/2021 02:18:13",
+                            "characters": [
+                                {
+                                    "character": "Thor (Ultimate)",
+                                    "comics": [
+                                        "Ultimate Comics Spider-Man (2009) #150 (WRAPAROUND VARIANT)",
+                                        "ULTIMATE X-MEN VOL. 5: ULTIMATE WAR TPB (Trade Paperback)"
+                                    ]
+                                }
+                                {
+                                    "character": "Sharon Carter",
+                                    "comics": [
+                                        "Captain America (2018) #22",
+                                        "Captain America (2018) #27",
+                                        "Captain America: Secret Empire (Trade Paperback)",
+                                        "Captain America: Winter Soldier Vol. 2 (Trade Paperback)",
+                                        "Secret Empire (2017) #9"
+                                    ]
+                                },
+                                {
+                                    "character": "Vision",
+                                    "comics": [
+                                        "ALL-NEW, ALL-DIFFERENT AVENGERS HC (Hardcover)",
+                                        "Avengers (2016) #11",
+                                        "Avengers: Unleashed Vol. 1 - Kang War One (Trade Paperback)",
+                                        "Avengers: Unleashed Vol. 2 - Secret Empire (Trade Paperback)"
+                                    ]
+                                },
+                                {
+                                    "character": "Captain Marvel (Carol Danvers)",
+                                    "comics": [
+                                        "Generations (Hardcover)",
+                                        "Secret Empire (2017) #8"
+                                    ]
+                                }
+                            ]
+                }
+            }
+```
 
 ### API  
 ---
