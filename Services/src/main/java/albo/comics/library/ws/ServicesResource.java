@@ -55,12 +55,13 @@ public class ServicesResource {
             ArtistsResponse artistsResponse = servicesManager.getColaborators(template);
             if (artistsResponse == null) {
                 response = new com.albo.library.response.util.Response(Result.NO_CONTENT, null);
-                response.getResult().setResponseDescription(response.getResult().getResponseDescription().replaceAll("[TEMPLATE]", template));
+                response.getResult().setResponseDescription(response.getResult().getResponseDescription().replace("[TEMPLATE]", template));
             } else {
                 response = new com.albo.library.response.util.Response(Result.SUCCESS, artistsResponse);
             }
 
         } catch (Exception ex) {
+            LOG.error(ex);
             response = new com.albo.library.response.util.Response(Result.ERROR, null);
         }
         LOG.info("Response get :: Colaborators [{}]", response.getResult());
@@ -77,12 +78,15 @@ public class ServicesResource {
             CharactersResponse charactersResponse = servicesManager.getCharacters(template);
             if (charactersResponse == null) {
                 response = new com.albo.library.response.util.Response(Result.NO_CONTENT, null);
-                response.getResult().setResponseDescription(response.getResult().getResponseDescription().replaceAll("[TEMPLATE]", template));
+                System.out.println(response.getResult());
+                response.getResult().setResponseDescription(response.getResult().getResponseDescription().replace("[TEMPLATE]", template));
             } else {
                 response
                         = new com.albo.library.response.util.Response(Result.SUCCESS, servicesManager.getCharacters(template));
             }
         } catch (Exception ex) {
+            ex.printStackTrace();
+             LOG.error(ex);
             response = new com.albo.library.response.util.Response(Result.ERROR, null);
         }
         LOG.info("Response get :: Characters [{}]", response.getResult());

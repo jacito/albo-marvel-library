@@ -30,7 +30,7 @@ import lombok.Getter;
 public enum ResultCode {
     GENERIC_SUCCESS(200, "OK", "Succesful transaction"),
     GENERIC_ERROR(500, "Unknown Error", "Internal Server Error"),
-    NO_CONTENT(503, "Service Unavailable", "The server is not ready to handle the request. [TEMPLATE]");
+    NO_CONTENT(503, "Service Unavailable", "The server is not ready to handle the request :: [TEMPLATE]");
 
     private final int code;
     private final String mesage;

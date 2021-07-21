@@ -34,12 +34,12 @@ import org.omnifaces.cdi.Eager;
 @Eager
 @Named
 public class Start {
-    
+
     private static final Logger LOG = LogManager.getLogger(Start.class);
-    
+
     @Inject
     private InformationBasic catalogManager;
-    
+
     @PostConstruct
     protected void initialize() {
         try {
@@ -48,7 +48,7 @@ public class Start {
             LOG.error(ex.toString());
             LOG.warn("The system could not be started correctly");
             LOG.warn("Wait for an upcoming update");
-            
+
         }
     }
 }

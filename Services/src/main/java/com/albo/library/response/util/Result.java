@@ -40,7 +40,7 @@ public class Result {
     public Result(ResultCode resultCode) {
         this.responseCode = resultCode.getCode();
         this.responseMessage = resultCode.getMesage();
-        this.responseMessage = resultCode.getDescription();
+        this.responseDescription = resultCode.getDescription();
     }
 
 }
