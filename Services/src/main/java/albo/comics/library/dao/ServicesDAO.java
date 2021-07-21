@@ -18,6 +18,7 @@
  */
 package albo.comics.library.dao;
 
+import albo.comics.library.AlboComicsLibraryException;
 import albo.comics.library.model.CharacterPrincipal;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -91,9 +92,8 @@ public class ServicesDAO extends AlboComicsLibraryPUDAO {
                 }
                 hashMap.get(role).add(name);
             });
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+        } catch (Exception ex) {
+            throw new AlboComicsLibraryException(ex);
         }
         return hashMap;
     }

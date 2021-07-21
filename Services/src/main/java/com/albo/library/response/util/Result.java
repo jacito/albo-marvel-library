@@ -29,19 +29,17 @@ import lombok.Data;
 @AllArgsConstructor
 public class Result {
 
-    public static final Result SUCCESS = new Result(ResultCode.RESULT_GENERIC_SUCCESS);
-    public static final Result ERROR = new Result(ResultCode.RESULT_GENERIC_ERROR);
-    public static final Result BAD_REQUEST = new Result(ResultCode.RESULT_BAD_REQUEST);
-    public static final Result NO_IMPLEMENTED = new Result(ResultCode.RESULT_NO_IMPLEMENTED);
-    public static final Result NOT_FOUND = new Result(ResultCode.RESULT_NOT_FOUND);
-    public static final Result VALID_COUPON = new Result(ResultCode.RESULT_VALID_COUPON);
-    public static final Result INVALID_COUPON = new Result(ResultCode.RESULT_INVALID_COUPON);
+    public static final Result SUCCESS = new Result(ResultCode.GENERIC_SUCCESS);
+    public static final Result ERROR = new Result(ResultCode.GENERIC_ERROR);
+    public static final Result NO_CONTENT = new Result(ResultCode.NO_CONTENT);
 
     private int responseCode;
     private String responseMessage;
+    private String responseDescription;
 
     public Result(ResultCode resultCode) {
         this.responseCode = resultCode.getCode();
+        this.responseMessage = resultCode.getMesage();
         this.responseMessage = resultCode.getDescription();
     }
 

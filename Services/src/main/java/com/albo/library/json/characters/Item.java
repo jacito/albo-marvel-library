@@ -1,4 +1,3 @@
-
 package com.albo.library.json.characters;
 
 import javax.annotation.Generated;
@@ -15,6 +14,7 @@ public class Item {
     @Expose
     private String name;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public String getResourceURI() {
         return resourceURI;
     }
@@ -30,5 +30,6 @@ public class Item {
     public void setName(String name) {
         this.name = name;
     }
+    // </editor-fold>
 
 }

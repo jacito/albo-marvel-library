@@ -1,4 +1,3 @@
-
 package com.albo.library.json.characters;
 
 import javax.annotation.Generated;
@@ -30,6 +29,7 @@ public class Characters {
     @Expose
     private Data data;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public Integer getCode() {
         return code;
     }
@@ -85,5 +85,6 @@ public class Characters {
     public void setData(Data data) {
         this.data = data;
     }
+    // </editor-fold>
 
 }

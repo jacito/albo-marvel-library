@@ -25,6 +25,7 @@ public class Data {
     @Expose
     private List<Result> results = null;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public Integer getOffset() {
         return offset;
     }
@@ -64,5 +65,6 @@ public class Data {
     public void setResults(List<Result> results) {
         this.results = results;
     }
+    // </editor-fold>
 
 }

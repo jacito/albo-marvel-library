@@ -19,35 +19,17 @@
 package com.albo.library.json.response;
 
 import java.util.List;
+import lombok.AllArgsConstructor;
 
 /**
  *
  * @author jacito
  */
+@lombok.Data
+@AllArgsConstructor
 public class Character {
 
     private String character;
     List<String> Comics;
-
-    public Character(String character, List<String> Comics) {
-        this.character = character;
-        this.Comics = Comics;
-    }
-
-    public String getCharacter() {
-        return character;
-    }
-
-    public void setCharacter(String character) {
-        this.character = character;
-    }
-
-    public List<String> getComics() {
-        return Comics;
-    }
-
-    public void setComics(List<String> Comics) {
-        this.Comics = Comics;
-    }
 
 }

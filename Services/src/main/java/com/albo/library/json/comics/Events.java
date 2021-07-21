@@ -22,6 +22,7 @@ public class Events {
     @Expose
     private Integer returned;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public Integer getAvailable() {
         return available;
     }
@@ -53,5 +54,6 @@ public class Events {
     public void setReturned(Integer returned) {
         this.returned = returned;
     }
+    // </editor-fold>
 
 }

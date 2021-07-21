@@ -15,6 +15,7 @@ public class Price {
     @Expose
     private Double price;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public String getType() {
         return type;
     }
@@ -30,5 +31,6 @@ public class Price {
     public void setPrice(Double price) {
         this.price = price;
     }
+    // </editor-fold>
 
 }

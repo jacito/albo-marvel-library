@@ -15,6 +15,7 @@ public class Url {
     @Expose
     private String url;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public String getType() {
         return type;
     }
@@ -30,5 +31,6 @@ public class Url {
     public void setUrl(String url) {
         this.url = url;
     }
+    // </editor-fold>
 
 }

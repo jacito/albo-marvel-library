@@ -112,6 +112,7 @@ public class Comic implements Serializable {
         return this;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public Integer getId() {
         return id;
     }
@@ -183,6 +184,7 @@ public class Comic implements Serializable {
     public void setResult(Result result) {
         this.result = result;
     }
+    // </editor-fold>
 
     @Override
     public int hashCode() {

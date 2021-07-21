@@ -30,6 +30,7 @@ public class Comics {
     @Expose
     private Data data;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public Integer getCode() {
         return code;
     }
@@ -85,5 +86,6 @@ public class Comics {
     public void setData(Data data) {
         this.data = data;
     }
+    // </editor-fold>
 
 }

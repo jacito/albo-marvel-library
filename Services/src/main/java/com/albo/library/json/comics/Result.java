@@ -96,6 +96,7 @@ public class Result {
     @Expose
     private Events events;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public Integer getId() {
         return id;
     }
@@ -327,5 +328,6 @@ public class Result {
     public void setEvents(Events events) {
         this.events = events;
     }
+    // </editor-fold>
 
 }

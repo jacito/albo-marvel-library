@@ -18,6 +18,7 @@ public class Item {
     @Expose
     private String role;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public String getResourceURI() {
         return resourceURI;
     }
@@ -41,5 +42,6 @@ public class Item {
     public void setRole(String role) {
         this.role = role;
     }
+    // </editor-fold>
 
 }

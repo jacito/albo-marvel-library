@@ -15,6 +15,7 @@ public class Series {
     @Expose
     private String name;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public String getResourceURI() {
         return resourceURI;
     }
@@ -30,5 +31,6 @@ public class Series {
     public void setName(String name) {
         this.name = name;
     }
+    // </editor-fold>
 
 }

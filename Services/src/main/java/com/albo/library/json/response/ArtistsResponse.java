@@ -20,35 +20,17 @@ package com.albo.library.json.response;
 
 import java.util.HashMap;
 import java.util.List;
+import lombok.AllArgsConstructor;
 
 /**
  *
  * @author jacito
  */
+@lombok.Data
+@AllArgsConstructor
 public class ArtistsResponse {
 
     private String last_sync;
     private HashMap<String, List<String>> jsonContent;
-
-    public ArtistsResponse(String last_sync, HashMap<String, List<String>> jsonContent) {
-        this.last_sync = last_sync;
-        this.jsonContent = jsonContent;
-    }
-
-    public String getLast_sync() {
-        return last_sync;
-    }
-
-    public void setLast_sync(String last_sync) {
-        this.last_sync = last_sync;
-    }
-
-    public HashMap<String, List<String>> getJsonContent() {
-        return jsonContent;
-    }
-
-    public void setJsonContent(HashMap<String, List<String>> jsonContent) {
-        this.jsonContent = jsonContent;
-    }
 
 }

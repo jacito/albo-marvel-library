@@ -28,15 +28,12 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum ResultCode {
-    RESULT_GENERIC_SUCCESS(200, "Transacción exitosa"),
-    RESULT_VALID_COUPON(200, "Cupon válido"),
-    RESULT_INVALID_COUPON(209, "Cupon inválido"),
-    RESULT_BAD_REQUEST(400, "Problema con la solicitud"),
-    RESULT_NOT_FOUND(404, "Recurso no encontrado con el identificador proporcionado "),
-    RESULT_NO_IMPLEMENTED(501, "No implementado"),
-    RESULT_GENERIC_ERROR(500, "Error desconocido");
+    GENERIC_SUCCESS(200, "OK", "Succesful transaction"),
+    GENERIC_ERROR(500, "Unknown Error", "Internal Server Error"),
+    NO_CONTENT(503, "Service Unavailable", "The server is not ready to handle the request. [TEMPLATE]");
 
     private final int code;
+    private final String mesage;
     private final String description;
 
 }

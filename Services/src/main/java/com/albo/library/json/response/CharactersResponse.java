@@ -20,11 +20,14 @@ package com.albo.library.json.response;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.AllArgsConstructor;
 
 /**
  *
  * @author jacito
  */
+@lombok.Data
+@AllArgsConstructor
 public class CharactersResponse {
 
     private String last_sync;
@@ -33,22 +36,6 @@ public class CharactersResponse {
     public CharactersResponse(String last_sync) {
         this.last_sync = last_sync;
         this.characters = new ArrayList<>();
-    }
-
-    public String getLast_sync() {
-        return last_sync;
-    }
-
-    public void setLast_sync(String last_sync) {
-        this.last_sync = last_sync;
-    }
-
-    public List<Character> getCharacters() {
-        return characters;
-    }
-
-    public void setCharacters(List<Character> characters) {
-        this.characters = characters;
     }
 
 }

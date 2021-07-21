@@ -1,4 +1,3 @@
-
 package com.albo.library.json.comics;
 
 import javax.annotation.Generated;
@@ -18,6 +17,7 @@ public class Item__2 {
     @Expose
     private String type;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public String getResourceURI() {
         return resourceURI;
     }
@@ -41,5 +41,6 @@ public class Item__2 {
     public void setType(String type) {
         this.type = type;
     }
+    // </editor-fold>
 
 }

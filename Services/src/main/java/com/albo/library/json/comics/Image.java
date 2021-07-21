@@ -15,6 +15,7 @@ public class Image {
     @Expose
     private String extension;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public String getPath() {
         return path;
     }
@@ -30,5 +31,6 @@ public class Image {
     public void setExtension(String extension) {
         this.extension = extension;
     }
+    // </editor-fold>
 
 }

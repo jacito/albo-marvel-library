@@ -22,6 +22,8 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.omnifaces.cdi.Eager;
 
 /**
@@ -32,13 +34,21 @@ import org.omnifaces.cdi.Eager;
 @Eager
 @Named
 public class Start {
-
+    
+    private static final Logger LOG = LogManager.getLogger(Start.class);
+    
     @Inject
     private InformationBasic catalogManager;
-
+    
     @PostConstruct
     protected void initialize() {
-
-       // catalogManager.initial();
+        try {
+            catalogManager.initial();
+        } catch (Exception ex) {
+            LOG.error(ex.toString());
+            LOG.warn("The system could not be started correctly");
+            LOG.warn("Wait for an upcoming update");
+            
+        }
     }
 }

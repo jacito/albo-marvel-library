@@ -88,6 +88,7 @@ public class CharacterPrincipal implements Serializable {
         this.template = template;
     }
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public Integer getId() {
         return id;
     }
@@ -151,6 +152,7 @@ public class CharacterPrincipal implements Serializable {
     public void setCharacterMarvelList(List<CharacterMarvel> characterMarvelList) {
         this.characterMarvelList = characterMarvelList;
     }
+    // </editor-fold>
 
     @Override
     public int hashCode() {

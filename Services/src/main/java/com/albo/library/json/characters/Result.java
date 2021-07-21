@@ -43,6 +43,7 @@ public class Result {
     @Expose
     private List<Url> urls = null;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public Integer getId() {
         return id;
     }
@@ -130,5 +131,6 @@ public class Result {
     public void setUrls(List<Url> urls) {
         this.urls = urls;
     }
+    // </editor-fold>
 
 }

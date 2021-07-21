@@ -24,10 +24,11 @@ import java.security.NoSuchAlgorithmException;
 
 /**
  *
- * >author jacito
+ * author jacito
  */
 public class Util {
 
+    // <editor-fold defaultstate="collapsed" desc="Logger Objects (init & shutdown). Click on the + sign on the left to edit the code.">
     private static String[] ALBO = {
         "...............................................................................",
         "...............................................................................",
@@ -120,6 +121,7 @@ public class Util {
         ".......................................................",
         "......................................................."
     };
+    // </editor-fold>
 
     public static String getMD5(String ts, String privateKey, String publiKey) {
         String compoundKey = ts + privateKey + publiKey;

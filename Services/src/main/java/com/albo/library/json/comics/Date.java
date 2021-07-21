@@ -15,6 +15,7 @@ public class Date {
     @Expose
     private String date;
 
+    // <editor-fold defaultstate="collapsed" desc="Main getters and setters. Click on the + sign on the left to edit the code.">
     public String getType() {
         return type;
     }
@@ -30,5 +31,6 @@ public class Date {
     public void setDate(String date) {
         this.date = date;
     }
+    // </editor-fold>
 
 }

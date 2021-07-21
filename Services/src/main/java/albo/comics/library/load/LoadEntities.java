@@ -63,7 +63,7 @@ public class LoadEntities {
                 loadComics(characterMarvel);
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            LOG.warn(ex);
         }
     }
 
@@ -85,7 +85,7 @@ public class LoadEntities {
                 }
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            LOG.warn(ex);
         }
     }
 
@@ -98,7 +98,7 @@ public class LoadEntities {
                 initialDAO.loadInformationCreators(creator);
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            LOG.warn(ex);
         }
     }
 
@@ -115,13 +115,13 @@ public class LoadEntities {
         }
     }
 
-    @Schedule(second = "*", minute = "*", hour = "*/2", persistent = false)
+    @Schedule(second = "*", minute = "*", hour = "*/6", persistent = false)
     private void all() {
         LOG.debug("Update system information ... ");
         try {
             informationBasic.initial();
         } catch (Exception ex) {
-            ex.printStackTrace();
+            LOG.warn(ex);
         }
     }
 
