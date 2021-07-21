@@ -26,9 +26,19 @@ Proyecto de integración de **API Marvel** para implementación de **librería c
 
 ### Servicio a)
   Permite obtener los colaboradores que han estado involucrados en los cómics del personaje.
-  
+  Actualmente solo disponible para 2 personajes
+  /marvel/colaborators/ironman
+  /marvel/colaborators/capamerica
   
 ### Servicio b)
   Permite obtener otros personajes que intrectuan con el personaje de la consulta principal, dentro de sus comics. 
+  Actualmente solo disponible para 2 personajes
+  /marvel/characters/ironman
+  /marvel/characters/capamerica
+  
+  Para mayor información sobre los servicios cunsulte
+  ![APIary](https://raw.githubusercontent.com/jacito/albo-marvel-library/main/Captura%20de%20Pantalla%202021-07-21%20a%20la(s)%2012.43.15.png)
+  [APIary](https://jacito.docs.apiary.io/#)
+  
 
   
