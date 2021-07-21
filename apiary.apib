@@ -1,0 +1,120 @@
+FORMAT: 1A
+HOST: https://polls.apiblueprint.org/
+
+# albo-marvel-library
+
+Descripción general de los servicios disponibles para AlboMarvelLibrary
+
+## Datos principales
+**Definición de datos mas usados.**
+
+| Variable   |      Definición      |
+|----------|-------------|
+|character| Nombre del personaje a consultar|
+
+
+# Data Structures
+
+##GenericResponse (object)
++ result (object)
+    + resultCode: 200 (number) - Codigo de respuesta.
+    + resultMessage: 'OK' (string) - Mensaje de respuesta.
+    + responseDescription: 'Succesful transaction' (string) - Descripción de la respuesta
+
+##GenericError (object)
++ result (object)
+    + resultCode: 500 (number) - Codigo de respuesta.
+    + resultMessage: 'Unknown Error' (string) - Mensaje de respuesta.
+    + responseDescription: 'Internal Server Error' (string) - Descripción de la respuesta
+
+##NoContent (object)
++ result (object)
+    + resultCode: 503 (number) - Codigo de respuesta.
+    + resultMessage: 'Service Unavailable' (string) - Mensaje de respuesta.
+    + responseDescription: 'The server is not ready to handle the request. [TEMPLATE]' (string) - Descripción de la respuesta
+
+##JsonContent (object)
++ editor: '' (array [string]) - 'Nombres de los colaborador'
++ colorist: '' (array [string]) - 'Nombres de los colaborador'
+  
+## Get Colaborators [/marvel/colaborators/{character}]
+
+### Get Colaborators (GET) [GET]
+
+Servicio A
+Permite obtener los colaboradores que han estado involucrados en los cómics del personaje solicitado.
+
++ Response 200 (application/json)
+       + Attributes (GenericResponse)
+        + object 
+            + last_sync: 'Fecha de la última sincronización en 21/00/2021 12:00:25' (string) - Fecha de última actualización de datos con Marvel API
+            + jsonContent (JsonContent)
+    + Body
+
+            {
+                "result": {
+                    "responseCode": 200,
+                    "responseMessage": "Transacción exitosa"
+                },
+                "object": {
+                            "last_sync": "Fecha de la última sincronización en 21/00/2021 12:00:25"
+                            "jsonContent": {
+                                "editor": [
+                                            "Axel Alonso",
+                                            "Wilson Moss"
+                                ],
+                                "colorist": [
+                                            "Andrew J. Troy",
+                                            "Andy Troy"
+                                ],
+                                "penciler": [
+                                            "Avalon Lan Medina"
+                                ]
+                            },
+                },
+            }
++ Response 500 (application/json)
+       + Attributes (GenericError)
++ Response 503 (application/json)
+       + Attributes (NoContent)
+       
+
+## Get Characters [/marvel/characters/{character}]
+
+### Get Characters (GET) [GET]
+
+Servicio B
+Permite obtener otros personajes con los cuales el personaje pirncipal (consulta), ha interactuado en cada uno de los cómics.
++ Response 200 (application/json)
+       + Attributes (GenericResponse)
+        + object 
+            + last_sync: 'Fecha de la última sincronización en 21/00/2021 12:00:25' (string) - Fecha de última actualización de datos con Marvel API
+            + jsonContent (JsonContent)
+    + Body
+
+            {
+                "result": {
+                    "responseCode": 200,
+                    "responseMessage": "Transacción exitosa"
+                },
+                "object": {
+                            "last_sync": "Fecha de la última sincronización en 21/00/2021 12:00:25"
+                            "jsonContent": {
+                                "editor": [
+                                            "Axel Alonso",
+                                            "Wilson Moss"
+                                ],
+                                "colorist": [
+                                            "Andrew J. Troy",
+                                            "Andy Troy"
+                                ],
+                                "penciler": [
+                                            "Avalon Lan Medina"
+                                ]
+                            },
+                },
+            }
++ Response 500 (application/json)
+       + Attributes (GenericError)
++ Response 503 (application/json)
+       + Attributes (NoContent)
