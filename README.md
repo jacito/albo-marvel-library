@@ -14,6 +14,7 @@ Proyecto de integración de **API Marvel** para implementación de **librería c
 - AlboMarvelLibrary
 - Requerimientos
 - Base de Datos
+- Intalación  
 - Servicio A
 - Servicio B
 - API
@@ -52,6 +53,16 @@ Cuenta con un arranque inicial que se encarga de conectar con el API MARVEL e ir
  [albo_comics_library_1.0.1_2021-07-21.sql](../albo-marvel-library/albo_comics_library_1.0.1_2021-07-21.sq)
   
 <p align="center"><img src="https://raw.githubusercontent.com/jacito/albo-marvel-library/main/albo_comics_library.png"/></p> 
+
+### Instalación
+---
+Para descargar y construir el war utilice el archivo [assemble.sh](../albo-marvel-library/assemble.sh)
+Porteriormente ejecutelo con sudo
+
+```
+sudo sh assemble.sh
+```
+
 
 
 ### Servicio a) ```# GET```
