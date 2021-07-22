@@ -115,7 +115,7 @@ public class LoadEntities {
         }
     }
 
-    @Schedule(second = "*", minute = "*", hour = "*/6", persistent = false)
+    @Schedule(second = "0", minute = "0", hour = "0", persistent = false)
     private void all() {
         LOG.debug("Update system information ... ");
         try {
